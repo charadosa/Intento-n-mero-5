@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Ti ❤️</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f0;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+        }
+        h1 {
+            color: #e60073;
+        }
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+        button {
+            background-color: #e60073;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #ff3385;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Razones por las que te amo ❤️</h1>
+        <p id="mensaje">Haz clic en el botón para verlas...</p>
+        <button onclick="mostrarMensaje()">Ver más</button>
+    </div>
+
+    <script>
+        const mensajes = [
+            "Me encanta tu sonrisa 😊",
+            "Lo inteligente que eres me impresiona 💡",
+            "Eres muy buena compañía en todo momento 🥰",
+            "Me encanta que te guste chismear conmigo 🤭",
+            "Cuando dices 'a ver' me embobas completamente 😍",
+            "Me gusta que me expliques cosas que no entiendo 📖",
+            "Lo paciente que eres conmigo significa mucho para mí 💖",
+            "Amo que irradias pura seguridad y confianza ✨"
+        ];
+
+        let index = 0;
+
+        function mostrarMensaje() {
+            document.getElementById("mensaje").innerText = mensajes[index];
+            index = (index + 1) % mensajes.length;
+        }
+    </script>
+
+</body>
+</html>
